@@ -18,10 +18,10 @@ class Config
         // ***** Database ***** //
         'dataSources'           => array(
             'ls_query' => array(
-                'host'               => '127.0.0.1',
+                'host'               => 'localhost',
                 'database'           => 'dbuser',
-                'username'           => 'dbuser',
-                'pass'               => 'dbuser123',
+                'username'           => 'dbikram',
+                'pass'               => 'dbikramikram',
                 'table'              => 'pti_ahli',
                 // specify the name of search columns
                 'searchColumns'      => array('NAMA','NO_KP'),
