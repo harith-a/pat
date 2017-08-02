@@ -205,11 +205,13 @@ function showTables(data){
             if(selectedSev == 1)
             	{
             		jQuery('#myTable7').text("Sudah");
+                    jQuery('#myTable7').css({"color" : "blue"});
                     document.getElementById("ls_query").focus();
         		}
             else
             	{
                     jQuery('#myTable7').text("Belum");
+                    jQuery('#myTable7').css({"color" : "red"});
                     $("#daftar").removeClass("hidden");
                     jQuery('#daftar').show();
                     document.getElementById("daftar").focus();
@@ -235,6 +237,7 @@ function buttonD(){
           if (data == "Berjaya"){
               jQuery('#panel-berjaya').show();
     		  jQuery('#myTable7').text("Sudah");
+              jQuery('#myTable7').css({"color" : "blue"});
 
               selectedSev = 1;
 
