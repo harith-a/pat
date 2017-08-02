@@ -34,15 +34,6 @@ if (session_id() == '') {
     <![endif]-->
     <link rel="stylesheet" type="text/css" href="css/ajaxlivesearch.css">
 
-    <style>
-       /*  .btn-default{
-            background:#b9cd6d;
-            opacity: ;
-            border: 1px solid #b9cd6d;
-            color: #FFFFFF;
-            font-weight: bold;
-       */  }
-      </style>
 </head>
 
 <body>
@@ -117,30 +108,19 @@ if (session_id() == '') {
                         <td class="active">Daftar </td>
                         <td id="myTable7"></td>
                     </tr>
-                    <!-- <tr>
-                        <td class="active">Badge</td>
-                        <td id="myTable8"></td>
-                    </tr> -->
                 </tbody>
             </table>
         </div>
     </div>
-    <!-- <div class="col-md-4 col-md-offset-3">
-        <h4 class="text-center" id="myTable7">Status: Belum Daftar </h4>
-        <h4 class="text-center" id="myTable8">Badge: Belum Terima</h4>
-   </div> -->
     <div class="col-md-4 col-md-offset-4">
     <div class="centerme">
         <button class="btn btn-default hidden" type="button" id="daftar" onclick="buttonD()">Daftar</button>
     </div>
     </div>
-	
-    <!-- <div id="dialog-1" title="Status Pendaftaran"></div> -->
 
 
 
-	<div class="col-md-4 col-md-offset-4">
-	<p></p>
+	<div class="col-md-4 col-md-offset-4 hidden" id="wrapper2">
     <div class="panel panel-success" id="panel-berjaya">
       <div class="panel-heading">Pendaftaran Berjaya</div>
     </div>
@@ -150,15 +130,7 @@ if (session_id() == '') {
     </div>
         
 	<!-- Placed at the end of the document so the pages load faster -->
-
-    <!-- <script src="assets/js/jquery.min.js"></script> -->
-    
     <script src="js/jquery-1.11.1.min.js"></script>
-    
-    <!-- jquery online -->
-    <!-- <link href="css/jquery-ui.css" rel="stylesheet"> -->
-    <!-- <script src="js/jquery-1.10.2.js"></script> -->
-    <!-- <script src="js/jquery-ui.js"></script> -->
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- Live Search Script -->
 	<script type="text/javascript" src="js/ajaxlivesearch.js"></script>
@@ -168,6 +140,7 @@ if (session_id() == '') {
 jQuery(document).ready(function(){
 
     $("#wrapper").removeClass("hidden");
+    $("#wrapper2").removeClass("hidden");
     $("#wrapper").show();
 
 	jQuery(".mySearch").ajaxlivesearch({
@@ -201,11 +174,6 @@ jQuery(document).ready(function(){
 
     jQuery('#panel-berjaya').hide();
     jQuery('#panel-gagal').hide();
-
-    // $( "#dialog-1" ).dialog({
-            //    autoOpen: false,  
-            // });
-    // $('#dialog-1').append('Pendaftaran Berjaya!')
 
 })
 
@@ -266,10 +234,6 @@ function buttonD(){
 		  
           if (data == "Berjaya"){
               jQuery('#panel-berjaya').show();
-            //   $("#dialog-1").text('Pendaftaran berjaya.')
-            //   $("#dialog-1").dialog( "open" );
-
-
     		  jQuery('#myTable7').text("Sudah");
 
               selectedSev = 1;
@@ -277,30 +241,14 @@ function buttonD(){
               $("#daftar").addClass("hidden");
             
               document.getElementById("ls_query").focus();
-            
-
           }
           else{
-            // $('#dialog-1').text('Pendaftaran gagal, sila hubungi pembantu teknikal.')
-            // $( "#dialog-1" ).dialog( "open" );
-            // alert("Pendaftaran Gagal");
             jQuery('#panel-gagal').show();
             document.getElementById("ls_query").focus();
           }
-
-
-		});
-			
-	
-		
+		});		
 }
 
-
- 
-
-
 </script>
-
 </body>
-
 </html>
