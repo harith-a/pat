@@ -37,7 +37,6 @@ canvas {
         <li><a href="#meChart">Negeri</a></li>
         <li><a href="#meChart2">Jantina</a></li>
         <li><a href="#meChart3">Umur</a></li>
-        <li><a href="#meChart4">Bukan Ahli</a></li>
     </ul>
   </div>
 </nav>
@@ -62,13 +61,6 @@ canvas {
         </div>
         <hr class="spacer-10">
 </div>
-<div class="row">
-        <div class="col-sm-11 col-centered" id="meChart4">
-            <canvas id="myChart4"></canvas>
-        </div>
-        <hr class="spacer-10">
-</div>
-
 
 
 <script src="js/Chart.min.js"></script>
@@ -111,7 +103,6 @@ $(".navHeight").height(navHeight);
 $("#meChart").height(myHeight);
 $("#meChart2").height(myHeight);
 $("#meChart3").height(myHeight);
-$("#meChart4").height(myHeight);
 
 
 $(document).ready(function() {
@@ -254,46 +245,6 @@ var myChart3 = new Chart(ctx3,{
         title: {
             display: true,
             text: 'Pecahan Umur (Ahli)', 
-        },
-        legend: {
-            display: false,
-        },
-        scales: {
-            yAxes: [{
-                display: true
-            }]
-        },
-
-    },
-
-});
-
-//Chart Kehadiran Ahli + Bukan Ahli
-
-var ctx4 = document.getElementById("myChart4");
-var myChart4 = new Chart(ctx4, {
-    type: 'pie',
-    data: {
-        labels: ["Ahli","Bukan Ahli"],
-        datasets: [{
-            label: 'Kehadiran Ahli & Bukan Ahli',
-            backgroundColor: [
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-            ],
-            borderColor: [
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 99, 132, 1)',
-            ],
-            data: data.JumlahAhlixAhli,
-            borderWidth: 1
-        }]
-    },
-    options: {
-        responsive: true,
-        title: {
-            display: true,
-            text: 'Pecahan Keahlian', 
         },
         legend: {
             display: false,

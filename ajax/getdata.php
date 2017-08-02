@@ -105,19 +105,8 @@ while($row4 = mysqli_fetch_array($result4)) {
 $JumlahUmur = array($r10,$r20,$r30,$r40,$r50,$r60,$r70);
 
 
-//query total kehadiran bukan ahli
-$sql5 = "SELECT * FROM `pti_xahli` WHERE `REGISTERED`=1";
-
-	if(!$result5 = $conn->query($sql5)){
-	    die('There was an error running the query [' . $db->error . ']');
-	}
-$bukanAhli = ($result5->num_rows);
-
-$JumlahAhlixAhli = array(($JumlahJantina[0] + $JumlahJantina[1]),$bukanAhli);
-
-
 //compile all data into single variable
-$multi = array('Negeri' => $negeri , 'JumlahNegeri' => $JumlahNegeri , 'JumlahJantina' => $JumlahJantina, 'JumlahUmur' => $JumlahUmur , 'JumlahAhlixAhli' => $JumlahAhlixAhli);
+$multi = array('Negeri' => $negeri , 'JumlahNegeri' => $JumlahNegeri , 'JumlahJantina' => $JumlahJantina, 'JumlahUmur' => $JumlahUmur);
 
 
 
