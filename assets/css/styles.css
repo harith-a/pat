@@ -1,0 +1,46 @@
+div.table-responsive{
+  margin:50px auto 0 auto;
+}
+
+button.btn.btn-default{
+  width:150px;
+  height: 65px;	
+  background-color:#00b760;
+  /*margin-left: 30%;*/
+  text-align: center;
+
+}
+
+p.help-block.text-center{
+  vertical-align:middle;
+}
+
+i.glyphicon.glyphicon-info-sign{
+  font-size:xx-large;
+  align-self:auto;
+}
+
+td{
+  width:initial;
+}
+
+td.active{
+  width:200px;
+}
+
+tbody{
+  border-collapse:collapse;
+}
+
+div.col-md-12{
+}
+
+#myAlert{
+  text-align: center;
+}
+
+.centerme {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
