@@ -256,29 +256,6 @@ function showTables(data){
 
 }
 
-$(function() {
-    $( "#dialog-1" ).dialog({
-       autoOpen: false,
-       buttons: {
-                  OK: function() {
-                    $(this).dialog("close");
-                    //empty the tables after submission
-                    jQuery('#myTable1').text("");
-                    jQuery('#myTable2').text("");
-                    jQuery('#myTable3').text("");
-                    jQuery('#myTable4').text("");
-                    jQuery('#myTable5').text("");
-                    jQuery('#myTable6').text("");
-                    jQuery('#myTable7').text("");
-                    //focus back to search bar
-                    jQuery('#ls_query').focus();
-                    }
-                  
-               },  
-    });
-    $(".ui-dialog-titlebar").hide();
- });
-
 
 function buttonD(){
 

@@ -1,8 +1,8 @@
 <?php
 
-$servername = "localhost";
-$username = "dbikram";
-$password = "dbikramikram";
-$dbname = "dbuser";
+$servername = 'localhost';
+$username = 'dbikram';
+$password = 'dbikramikram';
+$dbname = 'dbuser';
 
 ?>
