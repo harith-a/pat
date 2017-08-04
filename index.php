@@ -49,7 +49,7 @@ if (session_id() == '') {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Perhimpinan Ahli Teras 2017</a>
+      <a class="navbar-brand" href="#">Perhimpunan Ahli Teras 2017</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -206,6 +206,7 @@ function showTables(data){
             	{
             		jQuery('#myTable7').text("Sudah");
                     jQuery('#myTable7').css({"color" : "blue"});
+                    
                     document.getElementById("ls_query").focus();
         		}
             else
