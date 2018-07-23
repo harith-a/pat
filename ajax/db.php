@@ -3,6 +3,6 @@
 $servername = 'localhost';
 $username = 'dbikram';
 $password = 'dbikramikram';
-$dbname = 'dbuser';
+$dbname = 'pat18';
 
 ?>

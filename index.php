@@ -49,7 +49,8 @@ if (session_id() == '') {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Perhimpunan Ahli Teras 2017</a>
+      <a class="navbar-brand" href="#">Perhimpunan Ahli Teras 2018</a>
+
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -57,6 +58,7 @@ if (session_id() == '') {
 
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="status.php">Statistik</a></li>
+        <li class="active"><a href="admin.php">Admin</a></li>
       </ul>
       
       
@@ -181,7 +183,7 @@ jQuery(document).ready(function(){
 
 
 function showTables(data){
-
+            
             jQuery('#daftar').hide();
 
             selectedOne = jQuery(data.selected).find('td').eq('1').text();	//Name
@@ -192,7 +194,9 @@ function showTables(data){
             selectedSix = jQuery(data.selected).find('td').eq('5').text();  //Negeri
             selectedSev = jQuery(data.selected).find('td').eq('7').text();  //Register
 
-            
+
+            console.log(selectedSix);
+
             // set the input value
             jQuery('#myTable1').text(selectedOne);
             jQuery('#myTable2').text(selectedTwo);

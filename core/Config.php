@@ -19,7 +19,7 @@ class Config
         'dataSources'           => array(
             'ls_query' => array(
                 'host'               => 'localhost',
-                'database'           => 'dbuser',
+                'database'           => 'pat18',
                 'username'           => 'dbikram',
                 'pass'               => 'dbikramikram',
                 'table'              => 'pti_ahli',
