@@ -35,7 +35,7 @@ authHTML();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Perhimpunan Ahli Teras 2017</a>
+          <a class="navbar-brand" href="/">Perhimpunan Ahli Teras 2018</a>
 
         </div>
 
