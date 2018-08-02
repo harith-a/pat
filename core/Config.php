@@ -16,6 +16,7 @@ class Config
      */
     private static $configs = array(
         // ***** Database ***** //
+        // change <input> id to target data source e.g:ls_query -> ls_query_2
         'dataSources'           => array(
             'ls_query' => array(
                 'host'               => 'localhost',
@@ -55,7 +56,7 @@ class Config
                     'NO' => 'ls_hide',
                     'Registered' => 'ls_hide',
                     'JANTINA' => 'ls_hide',
-                    'DAERAH' => 'ls_hide',
+                    'KAWASAN' => 'ls_hide',
                     'NEGERI' => 'ls_hide',
                     'NO_AHLI' => 'ls_hide',
                 //    'your_column_name_1' => 'Your Desired Class',
@@ -64,11 +65,11 @@ class Config
                 'type'               => 'mysql',
             ),
             'ls_query_2' => array(
-                'host'               => '127.0.0.1',
-                'database'           => 'dbuser',
-                'username'           => 'dbuser',
-                'pass'               => 'dbuser123',
-                'table'              => 'pti_xahli',
+                'host'               => 'localhost',
+                'database'           => 'pat18',
+                'username'           => 'dbikram',
+                'pass'               => 'dbikramikram',
+                'table'              => 'pti_petugas',
                 // specify the name of search columns
                 'searchColumns'      => array('NAMA','NO_KP'),
                 // specify order by column. This is optional
@@ -99,11 +100,9 @@ class Config
                 // To hide a column use class 'ls_hide'
                 'columnClass' => array(
                     'NO' => 'ls_hide',
-                    'REGISTERED' => 'ls_hide',
-                    'BAYAR' => 'ls_hide',
-                    'STATUS' => 'ls_hide',
+                    'Registered' => 'ls_hide',
                     'JANTINA' => 'ls_hide',
-                    'DAERAH' => 'ls_hide',
+                    'KAWASAN' => 'ls_hide',
                     'NEGERI' => 'ls_hide',
                     'NO_AHLI' => 'ls_hide',
                 //    'your_column_name_1' => 'Your Desired Class',

@@ -22,7 +22,7 @@ if (session_id() == '') {
         <meta charset="utf-8">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Daftar PAT 2018</title>
+        <title>Daftar Petugas PAT 2018</title>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <!-- Live Search Styles -->
@@ -75,13 +75,13 @@ if (session_id() == '') {
         <div class="container"></div>
         <div class="col-md-12">
             <div class="page-header">
-                <h1 class="text-center">Pendaftaran</h1>
+                <h1 class="text-center">Pendaftaran Petugas</h1>
             </div>
         </div>
 
         <div class="col-md-6 col-md-offset-3 col-centered hidden" id="wrapper">
             <div style="clear: both;">
-                <input type="text" class='mySearch' id="ls_query" placeholder="Sila Taip Nama atau No Kad Pengenalan">
+                <input type="text" class='mySearch' id="ls_query_2" placeholder="Sila Taip Nama atau No Kad Pengenalan">
             </div>
         </div>
 

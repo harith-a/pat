@@ -76,7 +76,7 @@ ini_set('auto_detect_line_endings', true);
                 $r6 = $row['NEGERI']; 
                 $r7 = $row['KAWASAN'];
                                     
-                $sql = "INSERT INTO pti_ahli (`NO`, `NAMA`, `NO_AHLI`, `NO_KP`, `JANTINA`, `NEGERI`,`KAWASAN`) 
+                $sql = "INSERT INTO pti_petugas (`NO`, `NAMA`, `NO_AHLI`, `NO_KP`, `JANTINA`, `NEGERI`,`KAWASAN`) 
                 VALUES ('$r1','$r2','$r3','$r4','$r5','$r6','$r7')
                 ON DUPLICATE KEY UPDATE 
                 NO='$r1',

@@ -8,9 +8,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-    $sql = "UPDATE `pti_ahli` SET Registered=0";
+    $sql = "TRUNCATE `pti_ahli`";
     if ($conn->query($sql) === true) {
-        echo "Berjaya Reset Pendaftaran";
+        echo "Database Emptied";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    
+    $sql = "TRUNCATE `pti_petugas`";
+    if ($conn->query($sql) === true) {
+        echo "Database Emptied";
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

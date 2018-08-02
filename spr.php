@@ -22,8 +22,9 @@ if (session_id() == '') {
         <meta charset="utf-8">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Daftar PAT 2018</title>
+        <title>PAT 2018</title>
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/spr.css">
         <link rel="stylesheet" href="assets/css/styles.css">
         <!-- Live Search Styles -->
         <link rel="stylesheet" href="css/fontello.css">
@@ -50,7 +51,7 @@ if (session_id() == '') {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Perhimpunan Ahli Teras 2018</a>
+                    <a class="navbar-brand" href="#">Perhimpunan Ahli Teras 2018 - Semakan Pemilih</a>
 
                 </div>
 
@@ -75,7 +76,7 @@ if (session_id() == '') {
         <div class="container"></div>
         <div class="col-md-12">
             <div class="page-header">
-                <h1 class="text-center">Pendaftaran</h1>
+                <h1 class="text-center">Pemilihan</h1>
             </div>
         </div>
 
@@ -102,30 +103,58 @@ if (session_id() == '') {
                             <td id="myTable3"></td>
                         </tr>
                         <tr>
-                            <td class="active">Jantina </td>
-                            <td id="myTable4"></td>
-                        </tr>
-                        <tr>
-                            <td class="active">Daerah </td>
-                            <td id="myTable5"></td>
-                        </tr>
-                        <tr>
-                            <td class="active">Negeri </td>
-                            <td id="myTable6"></td>
-                        </tr>
-                        <tr>
-                            <td class="active">Daftar </td>
+                            <td class="active">Mengundi </td>
                             <td id="myTable7"></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <div class="col-md-4 col-md-offset-4">
-            <div class="centerme">
-                <button class="btn btn-default hidden" type="button" id="daftar" onclick="buttonD()">Daftar</button>
+
+        <!-- card -->
+        <div id="kategori" class="hidden">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="center-block">
+                        <div class="col-md-3 col-md-offset-2">
+                            <div class="card">
+                                <div class="container">
+                                    <h4>
+                                        <b>Wakil Umum</b>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="container">
+                                    <h4>
+                                        <b>Wakil Wanita</b>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 ">
+                            <div class="card">
+                                <div class="container">
+                                    <h4>
+                                        <b>Wakil Ulama'</b>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <!-- button -->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="centerme">
+                    <button class="btn btn-default hidden" type="button" id="daftar" onclick="buttonD()">Rekod</button>
+                </div>
+            </div>
         </div>
 
 
@@ -133,7 +162,7 @@ if (session_id() == '') {
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <h4 id="modalText">Pendaftaran Berjaya</h4>
+                        <h4 id="modalText">Rekod Undi Berjaya</h4>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-success" data-dismiss="modal">OK</button>
@@ -148,7 +177,7 @@ if (session_id() == '') {
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <!-- Live Search Script -->
         <script type="text/javascript" src="js/ajaxlivesearch.js"></script>
-        <script src="assets/js/main.js"></script>
+        <script src="assets/js/spr.js"></script>
         <script>
             jQuery(document).ready(function () {
 
