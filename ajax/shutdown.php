@@ -3,5 +3,5 @@
 $pass = $_POST["password"];
 
 echo $pass;
-exec('sudo -u root -S init 0 < '.$pass);
+exec('echo muhhar | sudo -S -k init 0');
 ?>
