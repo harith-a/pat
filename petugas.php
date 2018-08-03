@@ -97,22 +97,7 @@ if (session_id() == '') {
                             <td class="active">No Kad Pengenalan</td>
                             <td id="myTable2"></td>
                         </tr>
-                        <tr>
-                            <td class="active">No Ahli</td>
-                            <td id="myTable3"></td>
-                        </tr>
-                        <tr>
-                            <td class="active">Jantina </td>
-                            <td id="myTable4"></td>
-                        </tr>
-                        <tr>
-                            <td class="active">Daerah </td>
-                            <td id="myTable5"></td>
-                        </tr>
-                        <tr>
-                            <td class="active">Negeri </td>
-                            <td id="myTable6"></td>
-                        </tr>
+                        
                         <tr>
                             <td class="active">Daftar </td>
                             <td id="myTable7"></td>
@@ -148,7 +133,6 @@ if (session_id() == '') {
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <!-- Live Search Script -->
         <script type="text/javascript" src="js/ajaxlivesearch.js"></script>
-        <script src="assets/js/main.js"></script>
         <script>
             jQuery(document).ready(function () {
 
@@ -182,12 +166,99 @@ if (session_id() == '') {
                 });
 
 
-                document.getElementById("ls_query").focus();
+                document.getElementById("ls_query_2").focus();
 
 
                 jQuery('#panel-berjaya').hide();
                 jQuery('#panel-gagal').hide();
 
+            })
+
+            function showTables(data) {
+
+                jQuery('#daftar').hide();
+
+                selectedOne = jQuery(data.selected).find('td').eq('1').text(); //Name
+                selectedTwo = jQuery(data.selected).find('td').eq('2').text(); //IC
+
+                
+                selectedSev = jQuery(data.selected).find('td').eq('3').text(); //Register
+
+                // set the input value
+                jQuery('#myTable1').text(selectedOne);
+                jQuery('#myTable2').text(selectedTwo);
+                
+
+                //Status Daftar
+                if (selectedSev == 1) {
+                    jQuery('#myTable7').text("Sudah");
+                    jQuery('#myTable7').css({
+                        "background-color": "#79f289"
+                    });
+
+                    document.getElementById("ls_query_2").focus();
+                } else {
+                    jQuery('#myTable7').text("Belum");
+                    jQuery('#myTable7').css({
+                        "background-color": "#ffc793"
+                    });
+                    $("#daftar").removeClass("hidden");
+                    jQuery('#daftar').show();
+                    document.getElementById("daftar").focus();
+                }
+
+
+
+                // hide the result & empty search bar        	
+                jQuery(".mySearch").trigger('ajaxlivesearch:hide_result');
+                jQuery('.mySearch').val("");
+
+
+            }
+
+
+            function buttonD() {           
+
+                $.post("ajax/submitpetugas.php", {
+                    IC: selectedTwo,
+                    Register: 1
+                }, function (data) {
+
+                    if (data == "Berjaya") {
+
+                        jQuery('#myModal').modal();
+                        jQuery('#myTable7').text("Sudah");
+                        jQuery('#myTable7').css({
+                            "background-color": "#79f289"
+                        });
+
+                        selectedSev = 1;
+
+                        $("#daftar").addClass("hidden");
+                    } 
+                    else {
+                        jQuery('#myModal').modal();
+                        jQuery('#modalText').text("Pendaftaran Gagal. Sila hubungi urusetia.");
+                        jQuery('#modalText').css({
+                            "background-color": "#ffc793"
+                        });
+                    }
+                });
+            }
+
+            function check(e) {
+                if (e.key === "Enter") {
+                    $('#myModal').modal('toggle');
+                    document.getElementById("ls_query_2").focus();
+                }
+            }
+
+            $('#myModal').on('show.bs.modal', function () {
+                $('.container').addClass('blur');
+            })
+
+            $('#myModal').on('hide.bs.modal', function () {
+                $('.container').removeClass('blur');
             })
         </script>
     </body>

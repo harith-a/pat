@@ -109,21 +109,8 @@ if (session_id() == '') {
                             <td class="active">Daerah </td>
                             <td id="myTable5"></td>
                         </tr>
-                        <tr>
-                            <td class="active">Negeri </td>
-                            <td id="myTable6"></td>
-                        </tr>
-                        <tr>
-                            <td class="active">Daftar </td>
-                            <td id="myTable7"></td>
-                        </tr>
                     </tbody>
                 </table>
-            </div>
-        </div>
-        <div class="col-md-4 col-md-offset-4">
-            <div class="centerme">
-                <button class="btn btn-default hidden" type="button" id="daftar" onclick="buttonD()">Daftar</button>
             </div>
         </div>
         </div>
@@ -148,7 +135,7 @@ if (session_id() == '') {
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <!-- Live Search Script -->
         <script type="text/javascript" src="js/ajaxlivesearch.js"></script>
-        <script src="assets/js/main.js"></script>
+        <!-- <script src="assets/js/main.js"></script> -->
         <script>
             jQuery(document).ready(function () {
 
@@ -182,7 +169,33 @@ if (session_id() == '') {
                 });
 
 
-                document.getElementById("ls_query").focus();
+                function showTables(data) {
+
+                    jQuery('#daftar').hide();
+
+                    selectedOne = jQuery(data.selected).find('td').eq('1').text(); //Name
+                    selectedTwo = jQuery(data.selected).find('td').eq('3').text(); //IC
+                    selectedTre = jQuery(data.selected).find('td').eq('2').text(); //No Ahli
+                    selectedFor = jQuery(data.selected).find('td').eq('4').text(); //Jantina
+                    selectedFiv = jQuery(data.selected).find('td').eq('6').text(); //KAWASAN
+                    
+                    // set the input value
+                    jQuery('#myTable1').text(selectedOne);
+                    jQuery('#myTable2').text(selectedTwo);
+                    jQuery('#myTable3').text(selectedTre);
+                    jQuery('#myTable4').text(selectedFor);
+                    jQuery('#myTable5').text(selectedFiv);
+                    
+
+
+                    // hide the result & empty search bar        	
+                    jQuery(".mySearch").trigger('ajaxlivesearch:hide_result');
+                    jQuery('.mySearch').val("");
+
+
+                }
+
+                document.getElementById("semua_ahli").focus();
 
 
                 jQuery('#panel-berjaya').hide();

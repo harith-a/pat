@@ -1,10 +1,11 @@
 <?php
 include('db.php');
 
-$tablename = "pti_xahli";
+$tablename = "pti_petugas";
 
 $IC = $_POST["IC"];
 $Register = $_POST["Register"];
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
