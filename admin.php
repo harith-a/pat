@@ -137,13 +137,30 @@ authHTML();
               </div>
             </div>
 
+            <button type="button" class="btn btn-lg btn-danger pull-right" data-toggle="modal" data-target="#resetModal3">Shutdown</button>
+            <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="resetModal3">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Confirm Shutdown?</h4>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-info" id="shutdown-confirm">Yes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
-    
-    
-    
-    <!-- container -->
+
+
+
+      <!-- container -->
     </div>
 
 
@@ -214,15 +231,15 @@ authHTML();
                   alert('file not uploaded');
                 }
               },
-              error: function (e){
+              error: function (e) {
                 alert(e);
               }
             });
           }
         });
-        
-        $( "#resetModal" ).on('shown', function(){ 
-          
+
+        $("#resetModal").on('shown', function () {
+
           document.getElementById("modal-btn-confirm").focus();
         });
 
@@ -276,8 +293,20 @@ authHTML();
           });
           $("#resetModal2").modal('hide');
         });
-          
-        
+
+
+        $('#shutdown-confirm').click(function () {
+          // AJAX request
+          $.post("ajax/shutdown.php", {
+              password: "muhhar",
+            },
+            function (data, status) {
+              alert("Data: " + data + "\nStatus: " + status);
+            });
+          $("#resetModal3").modal('hide');
+        });
+
+
 
       });
     </script>

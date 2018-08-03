@@ -43,12 +43,12 @@ ini_set('auto_detect_line_endings', true);
                         {
                     // Store the current row as the header, check where is 1st column using array_search
                             $start = array_search("NO", $row);
-                            $end = array_search("KAWASAN", $row)+1;
+                            $end = array_search("NO. KP", $row)+1;
                             
                             if(is_numeric($start)){
                                 //remove empty column with slice
                                 $header = array_slice($row,$start,$end);
-                                // print_r($header);
+                                print_r($header);
                             }
                             
                         }
@@ -69,23 +69,15 @@ ini_set('auto_detect_line_endings', true);
             foreach ($array as $row){
 
                 $r1 = $row['NO']; 
-                $r2 = mysqli_real_escape_string($db,$row['NAMA']); 
-                $r3 = $row['NO. AHLI']; 
-                $r4 = $row['NO. KP']; 
-                $r5 = $row['JANTINA']; 
-                $r6 = $row['NEGERI']; 
-                $r7 = $row['KAWASAN'];
+                $r2 = mysqli_real_escape_string($db,$row['NAMA']);  
+                $r3 = $row['NO. KP'];
                                     
-                $sql = "INSERT INTO pti_petugas (`NO`, `NAMA`, `NO_AHLI`, `NO_KP`, `JANTINA`, `NEGERI`,`KAWASAN`) 
-                VALUES ('$r1','$r2','$r3','$r4','$r5','$r6','$r7')
-                ON DUPLICATE KEY UPDATE 
+                $sql = "INSERT INTO pti_petugas (`NO`, `NAMA`, `NO_KP`) 
+                VALUES ('$r1','$r2','$r3')
+                ON DUPLICATE KEY UPDATE
                 NO='$r1',
                 NAMA='$r2',
-                NO_AHLI='$r3',
-                NO_KP='$r4',
-                JANTINA='$r5',
-                NEGERI='$r6',
-                KAWASAN='$r7'";
+                NO_KP='$r3'";
                 
                 if(!$db->query($sql)){
                     echo "Error: %s\n".$db->error."<br>";
