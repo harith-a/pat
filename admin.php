@@ -12,7 +12,7 @@ authHTML();
     <meta charset="utf-8">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daftar PAT 2017</title>
+    <title>Daftar PAT 2018 - Admin</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <!-- <link rel="stylesheet" href="assets/css/styles.css"> -->
     <!-- Live Search Styles -->
