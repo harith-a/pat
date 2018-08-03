@@ -298,10 +298,7 @@ authHTML();
         $('#shutdown-confirm').click(function () {
           // AJAX request
           $.post("ajax/shutdown.php", {
-              password: "muhhar",
-            },
-            function (data, status) {
-              alert("Data: " + data + "\nStatus: " + status);
+              password: "muhhar"
             });
           $("#resetModal3").modal('hide');
         });
