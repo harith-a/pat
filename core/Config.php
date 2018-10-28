@@ -20,10 +20,10 @@ class Config
         'dataSources'           => array(
             'ls_query' => array(
                 'host'               => 'localhost',
-                'database'           => 'pat18',
-                'username'           => 'dbikram',
-                'pass'               => 'dbikramikram',
-                'table'              => 'pti_ahli',
+                'database'           => 'blabla',
+                'username'           => 'blabla',
+                'pass'               => 'blabla',
+                'table'              => 'blabla',
                 // specify the name of search columns
                 'searchColumns'      => array('NAMA','NO_KP'),
                 // specify order by column. This is optional
@@ -112,10 +112,10 @@ class Config
             ),
             'semua_ahli' => array(
                 'host'               => 'localhost',
-                'database'           => 'pat18',
-                'username'           => 'dbikram',
-                'pass'               => 'dbikramikram',
-                'table'              => 'pti_semua',
+                'database'           => 'blabla',
+                'username'           => 'blabla',
+                'pass'               => 'blabla',
+                'table'              => 'blabla',
                 // specify the name of search columns
                 'searchColumns'      => array('NAMA','NO_KP'),
                 // specify order by column. This is optional
